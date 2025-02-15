@@ -22,16 +22,11 @@ export default function CourseContent(
   function renderCourseList(item: CourseContent): React.ReactNode {
     const { name, description, content } = item;
 
-    // As title does not support React.ReactNode
-    const title: any = (
-      <span className='font-bold dark:text-white'>{name}</span>
-    );
-
     return (
       <Collapse
         key={name}
         className='!border-0'
-        title={title}
+        title={name}
         subtitle={description}
       >
         <Conditional condition={!!content}>
