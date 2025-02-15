@@ -1,5 +1,5 @@
 <div align="center">
-  ![android-chrome-192x192](https://github.com/user-attachments/assets/aa152ca1-9fb5-4b66-b892-b5a18683ad46)
+ ![logo](https://github.com/user-attachments/assets/a99ed76f-95a8-4702-ae60-da4fd9e5d6dd)
 </div>
 <h1 align="center">
 </h1>
