@@ -1,6 +1,6 @@
-![logo](https://github.com/user-attachments/assets/85296140-d26f-48b3-9902-ad4d90391904)
-<div align="center">
-</div>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/85296140-d26f-48b3-9902-ad4d90391904" alt="logo">
+</p>
 <h1 align="center">
 </h1>
 <p align="center">
