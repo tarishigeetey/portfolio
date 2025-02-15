@@ -2,7 +2,6 @@
   ![android-chrome-192x192](https://github.com/user-attachments/assets/aa152ca1-9fb5-4b66-b892-b5a18683ad46)
 </div>
 <h1 align="center">
-  tarishigeetey.com
 </h1>
 <p align="center">
   My portfolio built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>
