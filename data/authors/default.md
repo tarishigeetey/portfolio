@@ -1,22 +1,20 @@
 ---
-name: Karan Pratap Singh
-shortname: Karan
+name: Tarishi Geetey
+shortname: Tarishi
 avatar: /static/avatar.jpg
-occupation: Cloud Engineer
-company: Apple
-resume: /static/karan_resume.pdf
-email: contact@karanpratapsingh.com
-twitter: https://twitter.com/karan_6864
-linkedin: https://www.linkedin.com/in/karan99
-github: https://github.com/karanpratapsingh
+occupation: Full-Stack Developer
+company:
+resume: /static/Tarishi_resume.pdf
+email: tarishi.geetey@gmail.com
+twitter: https://twitter.com/tarishigeetey
+linkedin: https://www.linkedin.com/tarishigeetey
+github: https://github.com/tarishigeetey
 ---
 
-A software engineer who aims to evolve, innovate, and inspire through technology.
+**A Full Stack Developer passionate about building scalable and efficient applications, with evolving tech.**
 
-Currently, I am working as a **Cloud Engineer** at **Apple**.
+Previously, as a **Full-Stack Developer** at **IBM**, developing enterprise applications using Java, Spring Boot, ReactJS, and Angular. I designed scalable microservices, optimized databases, and integrated Kafka, leading to improved efficiency and customer satisfaction. I also received the Star Performer Award twice.
 
-Previously, I was a Senior Software Engineer at [Guardian Life](https://www.guardianlife.com), and a Senior Engineer at [Curebase](https://www.curebase.com) where I contributed to the creation of a decentralized clinical trial platform and scaling infrastructure with an emphasis on security, HIPAA compliance, and GDPR compliance.
+Beyond work, I’ve built multiple personal projects, designed modular architectures, and streamlined development workflows. I also trained students in Java programming and represented Madhya Pradesh at IISF 2019.
 
-Prior to that, I worked with the Digitization Program Office (DPO) at the [Smithsonian Institution](https://www.si.edu) as a consulting Software Developer in collaboration with the Office of the Chief Information Officer (OCIO).
-
-Outside of work, I've written more than 50 technical articles that have received over 1 million views. I've self-published two books, worked on US patents, and made contributions to open-source projects like Meta's [React Native (v0.60)](https://reactnative.dev/blog/2019/06/12/react-native-open-source-update).
+I strive to keep innovating and contributing to impactful full-stack solutions. Looking ahead, I aim to continue building high-performance full-stack applications and contributing to impactful technology solutions.

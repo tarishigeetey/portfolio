@@ -14,10 +14,10 @@ import { Toc } from 'types/Toc';
 const DEFAULT_LAYOUT = 'CourseLayout';
 
 export async function getStaticPaths() {
-  const courses = getFiles('courses');
+  const projects = getFiles('projects');
 
   return {
-    paths: courses.map(course => ({
+    paths: projects.map(course => ({
       params: {
         slug: formatSlug(course).split('/'),
       },
@@ -34,16 +34,16 @@ export const getStaticProps: GetStaticProps<{
   next?: { slug: string; title: string };
 }> = async ({ params }) => {
   const slug = (params.slug as string[]).join('/');
-  const allCourses = await getAllFilesFrontMatter('courses');
+  const allprojects = await getAllFilesFrontMatter('projects');
 
-  const courseIndex = allCourses.findIndex(
+  const courseIndex = allprojects.findIndex(
     course => formatSlug(course.slug) === slug,
   );
   let prev: { slug: string; title: string } =
-    allCourses[courseIndex + 1] || null;
+    allprojects[courseIndex + 1] || null;
   let next: { slug: string; title: string } =
-    allCourses[courseIndex - 1] || null;
-  const course = await getFileBySlug<CourseFrontMatter>('courses', slug);
+    allprojects[courseIndex - 1] || null;
+  const course = await getFileBySlug<CourseFrontMatter>('projects', slug);
   // @ts-ignore
   const authorList = course.frontMatter.authors || ['default'];
   const authorPromise = authorList.map(async author => {

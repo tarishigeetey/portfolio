@@ -1,22 +1,20 @@
 const siteMetadata = {
-  title: 'Karan Pratap Singh',
-  author: 'Karan Pratap Singh',
-  headerTitle: 'Karan Pratap Singh',
+  title: 'Tarishi Geetey',
+  author: 'Tarishi Geetey',
+  headerTitle: 'Tarishi Geetey',
   description:
-    'A software engineer who aims to evolve, innovate, and inspire through technology.',
+    'Software Engineer and Designer – Focused on evolving, innovating, and creating practical solutions through technology and design',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://karanpratapsingh.com',
-  siteRepo: 'https://github.com/karanpratapsingh/portfolio',
+  siteUrl: 'https://tarishigeetey.com',
+  siteRepo: 'https://github.com/tarishigeetey/portfolio',
   siteLogo: '/static/images/logo.png',
   image: '/static/avatar.jpg',
   socialBanner: '/static/banner.png',
-  email: 'contact@karanpratapsingh.com',
-  github: 'https://github.com/karanpratapsingh',
-  twitter: 'https://twitter.com/karan_6864',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  email: 'tarishi.geetey@gmail.com',
+  github: 'https://github.com/tarishigeetey',
+  twitter: 'https://twitter.com/tarishigeetey',
+  linkedin: 'https://www.linkedin.com/tarishigeetey',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

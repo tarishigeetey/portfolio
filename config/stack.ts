@@ -2,30 +2,28 @@ import { Colors } from './colors';
 
 export enum Stack {
   // Languages
-  go,
-  typescript,
+  java,
   javascript,
+  typescript,
   python,
 
   // Frontend
   react,
-  reactnative,
 
   // Backend
-  graphql,
+  springboot,
   node,
-  django,
 
   // Cloud
+  ibmcloud,
+  azure,
   aws,
-  gcp,
 
   // Messaging
-  nats,
   kafka,
 
   // Databases
-  arangodb,
+  db2,
   redis,
   postgres,
   mongo,
@@ -33,26 +31,27 @@ export enum Stack {
   // Tools
   docker,
   kubernetes,
-  terraform,
+
+  //AI tooling
+  langchain,
 }
 
 export const WorkStack = [
-  Stack.go,
+  Stack.java,
+  Stack.springboot,
   Stack.typescript,
   Stack.python,
   Stack.react,
   Stack.aws,
-  Stack.gcp,
+  Stack.azure,
   Stack.kubernetes,
   Stack.docker,
-  Stack.terraform,
-  Stack.nats,
   Stack.kafka,
-  Stack.graphql,
+  Stack.db2,
   Stack.postgres,
-  Stack.redis,
-  Stack.arangodb,
-  // Stack.reactnative,
+  Stack.ibmcloud,
+  Stack.langchain,
+  Stack.node,
 ];
 
 type StackInfoMap = {
@@ -69,53 +68,41 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'JavaScript',
     color: Colors.javascript,
   },
-  [Stack.go]: {
-    value: 'Go',
-    color: Colors.go,
+  [Stack.java]: {
+    value: 'Java',
+    color: Colors.java,
   },
   [Stack.react]: {
     value: 'React',
     color: Colors.react,
   },
-  [Stack.reactnative]: {
-    value: 'React Native',
-    color: Colors.reactnative,
+  [Stack.springboot]: {
+    value: 'Spring Boot',
+    color: Colors.springboot,
   },
-  [Stack.graphql]: {
-    value: 'GraphQL',
-    color: Colors.graphql,
+  [Stack.node]: {
+    value: 'Node.js',
+    color: Colors.node,
+  },
+  [Stack.db2]: {
+    value: 'DB2',
+    color: Colors.db2,
   },
   [Stack.aws]: {
     value: 'AWS',
     color: Colors.aws,
   },
-  [Stack.gcp]: {
-    value: 'Google Cloud',
-    color: Colors.gcp,
+  [Stack.azure]: {
+    value: 'Azure',
+    color: Colors.azure,
   },
   [Stack.python]: {
     value: 'Python',
     color: Colors.python,
   },
-  [Stack.node]: {
-    value: 'Node',
-    color: Colors.node,
-  },
-  [Stack.django]: {
-    value: 'Django',
-    color: Colors.django,
-  },
-  [Stack.nats]: {
-    value: 'NATS',
-    color: Colors.nats,
-  },
   [Stack.kafka]: {
     value: 'Kafka',
     color: Colors.kafka,
-  },
-  [Stack.arangodb]: {
-    value: 'ArangoDB',
-    color: Colors.arangodb,
   },
   [Stack.postgres]: {
     value: 'Postgres',
@@ -137,8 +124,12 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Kubernetes',
     color: Colors.kubernetes,
   },
-  [Stack.terraform]: {
-    value: 'Terraform',
-    color: Colors.terraform,
+  [Stack.ibmcloud]: {
+    value: 'IBM Cloud',
+    color: Colors.ibmcloud,
+  },
+  [Stack.langchain]: {
+    value: 'LangChain',
+    color: Colors.langchain,
   },
 };

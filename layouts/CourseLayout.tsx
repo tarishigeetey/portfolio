@@ -7,7 +7,6 @@ import { BlogSEO } from '@/components/SEO';
 import Share from '@/components/Share';
 import TOCInline from '@/components/TOCInline';
 import siteMetadata from '@/data/siteMetadata';
-import { courseSlugMap } from 'config/courses';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter';
@@ -51,7 +50,7 @@ export default function CourseLayout({
         url={url}
         authorDetails={authorDetails}
         {...frontMatter}
-        title={`${title} | ${courseSlugMap[courseSlug]}`}
+        title={`${title} | ""`}
       />
       <ScrollTopAndComment />
       <article className='fade-in'>

@@ -30,11 +30,11 @@ function verifyArgs() {
 }
 
 function getBanner(section, course_slug, slug) {
-  return `https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/${course_slug}/${section}/${slug}/banner.png`;
+  return `https://raw.githubusercontent.com/tarishigeetey/portfolio/master/public/static/projects/${course_slug}/${section}/${slug}/banner.png`;
 }
 
 function getBody(course_slug, slug) {
-  const path = `data/courses/${course_slug}/${slug}.mdx`;
+  const path = `data/projects/${course_slug}/${slug}.mdx`;
   const content = fs.readFileSync(path);
   const frontmatter = matter(content.toString());
 
@@ -42,14 +42,14 @@ function getBody(course_slug, slug) {
   let body = frontmatter.content;
 
   body = body.replace(
-    /\]\(\/static\/courses/g,
-    '](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses',
+    /\]\(\/static\/projects/g,
+    '](https://raw.githubusercontent.com/tarishigeetey/portfolio/master/public/static/projects',
   );
 
   // Replace static links
   body = body.replace(
-    new RegExp(`]\\(/courses/${course_slug}`, 'g'),
-    `](https://karanpratapsingh.com/courses/${course_slug}`,
+    new RegExp(`]\\(/projects/${course_slug}`, 'g'),
+    `](https://tarishigeetey.com/projects/${course_slug}`,
   );
 
   // Add footer
@@ -57,9 +57,9 @@ function getBody(course_slug, slug) {
 
 ---
 
-_This article is part of my open-source [System Design Course](https://github.com/karanpratapsingh/system-design) available on Github._
+_This article is part of my open-source [System Design Course](https://github.com/tarishigeetey/system-design) available on Github._
 
-{% github karanpratapsingh/system-design %}`;
+{% github tarishigeetey/system-design %}`;
 
   return body;
 }
@@ -98,7 +98,7 @@ function createDraft(apiKey, body) {
     const title = `System Design: ${name}`;
     const main_image = getBanner(section, course_slug, slug);
     const tags = ['distributedsystems', 'architecture', 'tutorial'];
-    const canonical_url = `https://github.com/karanpratapsingh/${course_slug}#${slug}`;
+    const canonical_url = `https://github.com/tarishigeetey/${course_slug}#${slug}`;
     const series = 'System Design';
     const body_markdown = getBody(course_slug, slug);
 

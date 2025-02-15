@@ -1,7 +1,7 @@
 /**
  * Combine Course
  *
- * This script combines courses into one article.
+ * This script combines projects into one article.
  */
 
 const usage = `Usage:
@@ -37,7 +37,7 @@ function verifyArgs() {
 }
 
 async function getCourseTopics(slug) {
-  const paths = await globby(`data/courses/${slug}/*.mdx`);
+  const paths = await globby(`data/projects/${slug}/*.mdx`);
 
   const topics = [];
   for (const path of paths) {
@@ -91,14 +91,14 @@ function printTOC(slug, topics) {
 
 function transformBody(course_slug, body) {
   body = body.replace(
-    /\]\(\/static\/courses/g,
-    '](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses',
+    /\]\(\/static\/projects/g,
+    '](https://raw.githubusercontent.com/tarishigeetey/portfolio/master/public/static/projects',
   );
 
   // Replace static links
   body = body.replace(
-    new RegExp(`]\\(/courses/${course_slug}`, 'g'),
-    `](https://karanpratapsingh.com/courses/${course_slug}`,
+    new RegExp(`]\\(/projects/${course_slug}`, 'g'),
+    `](https://tarishigeetey.com/projects/${course_slug}`,
   );
 
   return body;
@@ -113,7 +113,7 @@ date: '${time.getFullYear()}-${time.getUTCMonth()}-${time.getDate()}'
 tags: ['${course_slug}']
 draft: false
 summary: 'todo'
-images: ['/static/courses/${course_slug}/banner.png']
+images: ['/static/projects/${course_slug}/banner.png']
 authors: ['default']
 ---\n`,
   ];
