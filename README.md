@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://user-images.githubusercontent.com/29705703/128719328-ed17026c-09f8-4f7c-a435-02881dc49b96.png" width="100px" />
+  ![android-chrome-192x192](https://github.com/user-attachments/assets/aa152ca1-9fb5-4b66-b892-b5a18683ad46)
 </div>
 <h1 align="center">
   tarishigeetey.com
@@ -16,7 +16,3 @@
 ## Make it your own!
 
 This portfolio was built on top of [Tailwind Next JS Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) template which comes with built-in blogs functionality and much more!
-
-## Demonstration
-
-<video src="https://user-images.githubusercontent.com/29705703/163712138-4ad03388-0bba-4797-b493-383726e4daaa.mp4" autoplay />
