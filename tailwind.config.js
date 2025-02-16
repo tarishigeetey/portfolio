@@ -29,11 +29,17 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'Open Sans',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'sans-serif',
+        ],
       },
       colors: {
         primary: colors.cyan,
-        gray: colors.neutral,
+        gray: colors.gray,
         'placeholder-light': '#F0F0F0',
         'placeholder-dark': '#252525',
       },

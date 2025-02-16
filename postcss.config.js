@@ -1,9 +1,16 @@
+// postcss.config.js
+// module.exports = {
+//   plugins: {
+//     '@tailwindcss/postcss': {
+//       config: './tailwind.config.js'
+//     },
+//     autoprefixer: {},
+//   }
+// }
+
 module.exports = {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {
-      overrideBrowserslist: ['last 2 versions'],
-      flexbox: 'no-2009',
-    },
+    autoprefixer: {},
   },
 };

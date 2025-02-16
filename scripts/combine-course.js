@@ -37,7 +37,7 @@ function verifyArgs() {
 }
 
 async function getCourseTopics(slug) {
-  const paths = await globby(`data/projects/${slug}/*.mdx`);
+  const paths = await globby(`data/courses/${slug}/*.mdx`);
 
   const topics = [];
   for (const path of paths) {

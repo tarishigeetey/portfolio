@@ -34,7 +34,7 @@ function getBanner(section, course_slug, slug) {
 }
 
 function getBody(course_slug, slug) {
-  const path = `data/projects/${course_slug}/${slug}.mdx`;
+  const path = `data/courses/${course_slug}/${slug}.mdx`;
   const content = fs.readFileSync(path);
   const frontmatter = matter(content.toString());
 
