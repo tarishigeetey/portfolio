@@ -103,4 +103,5 @@ module.exports = withBundleAnalyzer({
 
     return config;
   },
+  distDir: 'build',
 });
