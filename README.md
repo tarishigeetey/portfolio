@@ -10,7 +10,8 @@
   <a href="https://app.netlify.com/sites/tarishigeetey/deploys" target="_blank">
     <img src="http://therealsujitk-vercel-badge.vercel.app/?app=portfolio&style=for-the-badge" alt="Vercel Status" />
   </a>
-</p>
+</p><img width="1243" alt="portfolio" src="https://github.com/user-attachments/assets/0df678d3-579d-4132-8bc0-08df24a395cb" />
+
 
 ## Make it your own!
 
