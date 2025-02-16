@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "build/package.json",
+      "src": "package.json",
       "use": "@vercel/next"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "destination": "/"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
