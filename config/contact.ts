@@ -14,7 +14,7 @@ export interface Contact {
 
 export const contact: Contact = {
   twitter: '@tarishigeetey',
-  site: 'tarishigeetey.com',
+  site: 'https://tarishigeetey.vercel.app',
   calendly: 'https://calendly.com/tarishi-geetey',
   links: {
     github: 'https://github.com/tarishigeetey',
