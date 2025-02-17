@@ -15,7 +15,7 @@ export interface Contact {
 export const contact: Contact = {
   twitter: '@tarishigeetey',
   site: 'tarishigeetey.com',
-  calendly: 'https://calendly.com/tarishigeetey',
+  calendly: 'https://calendly.com/tarishi-geetey',
   links: {
     github: 'https://github.com/tarishigeetey',
     linkedin: 'https://linkedin.com/in/tarishigeetey',
