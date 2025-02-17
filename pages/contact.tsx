@@ -1,27 +1,22 @@
+import { useState } from 'react';
 import { Header } from '@/components/Form';
 import { PageSEO } from '@/components/SEO';
 import siteMetadata from '@/data/siteMetadata';
 import { useRandomColorPair } from '@/lib/hooks/useRandomColorPair';
 import { contact } from 'config/contact';
-import { PopupWidget } from 'react-calendly';
 import { RoughNotation } from 'react-rough-notation';
+import { PopupModal } from 'react-calendly';
 
 function Contact(): React.ReactElement {
   const [randomColor] = useRandomColorPair();
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // State to control popup
 
   function onScheduleMeeting(): void {
     if (!contact.calendly) {
       console.error('err: calendly link was not provided.');
       return;
     }
-
-    const config = {
-      url: contact.calendly,
-      text: 'Schedule time with me',
-      rootElement: document.getElementById('__next'),
-    };
-
-    new PopupWidget(config);
+    setIsPopupOpen(true); // Open Calendly popup
   }
 
   return (
@@ -56,6 +51,16 @@ function Contact(): React.ReactElement {
           </p>
         </div>
       </div>
+
+      {/* Render PopupModal only when needed */}
+      {isPopupOpen && (
+        <PopupModal
+          url={contact.calendly}
+          rootElement={document.body} // Attach to the correct root element
+          onModalClose={() => setIsPopupOpen(false)} // Close popup when Calendly is closed
+          open={isPopupOpen} // Control visibility
+        />
+      )}
     </>
   );
 }
