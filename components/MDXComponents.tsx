@@ -7,7 +7,6 @@ import TOCInline from './TOCInline';
 import Pre from './Pre';
 import { BlogNewsletterForm } from './NewsletterForm';
 
-console.log(BlogNewsletterForm);
 const Wrapper: React.ComponentType<{ layout: string }> = ({
   layout,
   ...rest
