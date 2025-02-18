@@ -1,0 +1,177 @@
+---
+title: 'Building My First App from Scratch to Deployment: Muzik – Emotion-Driven Music Recommendations'
+date: '2025-02-17'
+tags: ['react', 'spring boot', 'ai', 'music', 'spotify', 'full-stack']
+draft: false
+summary: 'Learn how I built Muzik, an emotion-driven music recommendation app, from scratch.'
+images: ['/static/blogs/muzik-app.jpeg']
+authors: ['default']
+---
+
+## **Step 1: The Idea – Turning a Thought into a Project**
+
+Music is a powerful companion—it reflects our emotions, enhances our experiences, and sometimes, even heals us. However, finding the right song for a specific mood isn’t always easy.
+
+This sparked an idea:  
+🔹 **What if an app could analyze emotions and generate playlists that match your mood?**
+
+That’s how **Muzik** was born. The goal? **Emotion-driven music recommendations.** The app would take **text-based input**, detect the user’s mood, and fetch a matching playlist from **Spotify’s vast music library**.
+
+💡 **Core Concept:**  
+1️⃣ Detect the **user’s mood** using AI-powered sentiment analysis.  
+2️⃣ **Map emotions to music genres** intelligently.  
+3️⃣ Fetch **personalized playlists** from **Spotify’s API**.
+
+---
+
+## **Step 2: Designing the System – Breaking Down the Architecture**
+
+Before jumping into coding, I focused on **how Muzik would function** as a system.
+
+### **Tech Stack Choices**
+
+I wanted a **modern, scalable, and efficient system**:
+
+- **Frontend:** ReactJS _(Fast, interactive, and ideal for music apps)_
+- **Backend:** Java Spring Boot _(Robust, secure, and well-suited for APIs)_
+- **Database:** Supabase (PostgreSQL) _(Scalable & reliable for user preferences and history)_
+- **APIs:**
+  - **Hugging Face** (Emotion detection & sentiment analysis)
+  - **Spotify API** (Song search & playlist generation)
+
+### **System Overview**
+
+🔷 **User Input** → "I'm feeling nostalgic and calm."  
+🔷 **Emotion Detection** → Hugging Face AI detects _"nostalgic & calm"_.  
+🔷 **Genre Mapping** → App matches this to _Soft Rock, Acoustic, Indie_.  
+🔷 **Spotify API Call** → Fetches songs from these genres.  
+🔷 **Personalized Playlist** → Displayed on the UI.
+
+📌 **Goal:** Keep it **fast, responsive, and intuitive**.
+
+---
+
+## **Step 3: Database & Data Flow – Structuring the Data**
+
+For any AI-driven application, **structured data** is crucial. I designed the **database schema** with **three key tables**:
+
+### **🎵 Database Schema**
+
+| Table Name | Description                                                 |
+| ---------- | ----------------------------------------------------------- |
+| `emotions` | Stores emotion types (e.g., Happy, Sad, etc.)               |
+| `moods`    | Maps emotions to specific moods (e.g., Energetic, Calm)     |
+| `genres`   | Maps moods to specific music genres (e.g., Pop, Rock, Jazz) |
+
+### **Data Flow**
+
+1️⃣ **User sends a mood text** → Frontend sends request to backend.  
+2️⃣ **Spring Boot processes request** → Calls Hugging Face API for sentiment analysis.  
+3️⃣ **Backend maps emotions to moods** → Looks up data in `moods` table.  
+4️⃣ **Backend maps moods to genres** → Looks up data in `genres` table.  
+5️⃣ **Spotify API fetches songs** → Backend makes an authenticated request to Spotify.  
+6️⃣ **Database stores user interactions** → Logs playlists for future recommendations.  
+7️⃣ **Frontend displays results** → A dynamic, scrollable playlist appears.
+
+💡 **Why Supabase?**
+
+- PostgresSQL’s **relational structure** is perfect for handling **users & moods**.
+- **Scalability** – Future versions can include **user login, playlist history, and custom mood tracking**.
+
+---
+
+## **Step 4: UI/UX – Keeping it Simple & User-Friendly**
+
+A good product isn’t just about functionality—it **must feel intuitive** to the user. I designed Muzik’s UI with **simplicity** in mind:
+
+### **🎨 Key UI/UX Decisions**
+
+✅ **Minimalist layout** – Focus on **mood input & playlist display**.  
+✅ **Left-aligned form** – Quick, effortless text input.  
+✅ **No clutter** – Users get **results instantly**.  
+✅ **Dark & light mode toggle** – Enhances accessibility.  
+✅ **Mobile-responsive** – Works seamlessly across devices.
+
+### **Wireframe Sketches (Initial Concepts)**
+
+1️⃣ **Mood Input Box** – A simple text field for users to enter how they feel.  
+2️⃣ **Playlist Section** – A clean, scrollable list of suggested songs.  
+3️⃣ **Emotion Visualization (Optional Future Feature)** – A small AI-powered graph showing mood trends.
+
+I used **Tailwind CSS** to ensure fast, modern, and responsive styling.
+
+---
+
+## **Step 5: Backend System – Building with Java Spring Boot**
+
+With the **frontend wireframes ready**, I built the **backend API** in **Spring Boot**.
+
+### **🔧 Backend API Workflow**
+
+- **Controller Layer**: Handles API requests.
+- **Service Layer**: Calls Hugging Face & Spotify APIs.
+- **Repository Layer**: Connects to Supabase for data storage.
+
+### **🔑 Key Backend Challenges & Solutions**
+
+✅ **OAuth with Spotify API** → Handled **token refresh & session management** securely.  
+✅ **Handling AI Requests Efficiently** → Cached Hugging Face API results for faster responses.  
+✅ **Real-Time API Calls** → Optimized query speed using **Azure Redis Cache**.
+
+💡 **Key Learning:** Designing **efficient API calls** was crucial in ensuring fast performance.
+
+---
+
+## **Step 6: Testing & Deployment – Making It Production-Ready**
+
+A **good developer tests before shipping.** 🚀 I ensured Muzik was **bug-free and scalable** before deployment.
+
+### **🧪 Testing Strategy**
+
+✔️ **Unit Testing** – Used **JUnit & Mockito** for backend services.  
+✔️ **API Testing** – Ensured Hugging Face & Spotify integrations worked reliably.  
+✔️ **Performance Testing** – Simulated multiple API calls to check response times.
+
+### **🚀 Deployment Strategy**
+
+- **Backend:** Deployed using **Docker, Azure Redis, & Azure Container Apps**.
+- **Frontend:** Hosted on **Vercel** with **GitHub Actions for CI/CD**.
+
+---
+
+## **Step 7: The Final Version & Next Steps**
+
+After weeks of **development, testing, and refining**, Muzik was **ready for launch.** 🚀
+
+📌 **Current Status:**  
+✅ **Live & Working** – Beta version launched.  
+✅ **10-15 User Testing** – Gathering feedback for improvements.  
+✅ **Refactoring & Enhancements** – Continuous improvements in progress.
+
+📌 **Future Plans:**  
+🔹 **User Accounts & Preferences** – Personalized playlist history.  
+🔹 **More AI-driven Features** – Fine-tuning **emotion-to-music recommendations**.  
+🔹 **Multi-language Support** – Expanding usability globally.
+
+---
+
+## **Final Thoughts – What I Learned**
+
+Building **Muzik** was a **fun, challenging, and rewarding** experience.
+
+### **💡 Key Takeaways:**
+
+✔️ **Start with a clear plan** – A solid architecture saves time.  
+✔️ **APIs are powerful, but tricky** – OAuth, rate limits, and security matter.  
+✔️ **User Experience is key** – A beautiful UI makes functionality shine.  
+✔️ **Testing & Deployment make a difference** – A project isn’t done until it runs smoothly in production.
+
+Would I do it again? **Absolutely.** 🎧🔥
+
+---
+
+## **Want to Try Muzik? Let’s Connect! 🚀**
+
+If you’re interested in **AI, music tech, or full-stack development**, I’d love to chat! Drop a comment or reach out. Let’s build cool things together. 🎶✨
+
+---

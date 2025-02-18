@@ -7,6 +7,7 @@ import TOCInline from './TOCInline';
 import Pre from './Pre';
 import { BlogNewsletterForm } from './NewsletterForm';
 
+console.log(BlogNewsletterForm);
 const Wrapper: React.ComponentType<{ layout: string }> = ({
   layout,
   ...rest
@@ -17,13 +18,10 @@ const Wrapper: React.ComponentType<{ layout: string }> = ({
 
 export const MDXComponents: ComponentMap = {
   Image,
-  //@ts-ignore
   TOCInline,
   a: CustomLink,
   pre: Pre,
   wrapper: Wrapper,
-  //@ts-ignore
-  BlogNewsletterForm,
 };
 
 interface Props {
